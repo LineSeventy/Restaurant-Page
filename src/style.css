@@ -1,0 +1,37 @@
+:root {
+    --nav-color: darkgrey;
+}
+
+body{
+ padding: 0;
+ margin: 0;
+}
+
+header {
+    height: 10vh;
+    width: 100vw;
+    background-color: var(--nav-color);
+    display: flex;
+    justify-content: end;
+    box-sizing: border-box;
+}
+
+button {
+    border: none;
+    margin-top: 1em;
+    margin-right: 1em;
+    background-color: var(--nav-color);
+    color: white;
+    font-size: x-large;
+    cursor: pointer;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.img {
+    background-color: darkolivegreen;
+    height: 90vh;
+}
