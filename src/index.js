@@ -1,3 +1,4 @@
-import "./style.css"
+import "./style.css";
+
 
 console.log("This is a test")

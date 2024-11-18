@@ -8,12 +8,15 @@ body{
 }
 
 header {
+    position: relative;
     height: 10vh;
     width: 100vw;
     background-color: var(--nav-color);
     display: flex;
     justify-content: end;
     box-sizing: border-box;
+    box-shadow: 1px 2px 5px black;
+    z-index: 2;
 }
 
 button {
@@ -26,6 +29,10 @@ button {
     cursor: pointer;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 .container{
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -33,5 +40,12 @@ button {
 
 .img {
     background-color: darkolivegreen;
-    height: 90vh;
+    height: 89vh; 
+    z-index: 1;
+    background-image: url(./Img/friedrice.jpg);
+}
+
+.img img {
+    height: 100%;
+    width: 100%;
 }
