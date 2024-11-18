@@ -1,5 +1,5 @@
 :root {
-    --nav-color: darkgrey;
+    --nav-color: darkolivegreen;
 }
 
 body{
@@ -13,12 +13,16 @@ header {
     width: 100vw;
     background-color: var(--nav-color);
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     box-sizing: border-box;
     box-shadow: 1px 2px 5px black;
     z-index: 2;
 }
-
+header h1 {
+    color: white;
+    margin-left: 1em;
+    font-size: xx-large;
+}
 button {
     border: none;
     margin-top: 1em;
@@ -33,14 +37,12 @@ button {
     box-sizing: border-box;
 }
 
-.container{
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-}
+
 
 .img {
+    position: relative;
     background-color: darkolivegreen;
-    height: 89vh; 
+    height: 90vh; 
     z-index: 1;
     background-image: url(./Img/friedrice.jpg);
 }
@@ -48,4 +50,23 @@ button {
 .img img {
     height: 100%;
     width: 100%;
+}
+
+.details {
+    position: absolute;
+    top: 0;
+    left: 70%;
+    width: 30%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.details p {
+    color: white;
+    margin-left: 2em;
+    margin-right: 2em;
 }
