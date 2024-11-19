@@ -40,6 +40,7 @@ button {
 
 
 .img {
+    display: block;
     position: relative;
     background-color: darkolivegreen;
     height: 90vh; 

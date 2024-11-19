@@ -2,11 +2,17 @@ import "./style.css";
 
 const displaySystem = () => {
     const content = document.querySelector("#content");
-    const img = document.createElement("image");
+    const container = document.createElement("div");
+    container.classList.add("img");
+
+    const img = document.createElement("img");
+
     const details = document.createElement("div");
-    
-    content.appendChild(img);
-    img.appendChild(details);
+    details.classList.add("details");
+
+    container.appendChild(img);
+    container.appendChild(details);
+    content.appendChild(container)
 }
 
 displaySystem();
