@@ -7,6 +7,12 @@ body{
  margin: 0;
 }
 
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; 
+}
+
 header {
     position: relative;
     height: 10vh;
@@ -34,18 +40,23 @@ button {
 }
 
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 
 
 .img {
-    display: block;
-    position: relative;
+    position: absolute; 
+    top: 10vh; 
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 10vh);
     background-color: darkolivegreen;
-    height: 90vh; 
-    z-index: 1;
     background-image: url(./Img/friedrice.jpg);
+    background-size: cover ; 
+    background-position: center;
 }
 
 .img img {
@@ -64,8 +75,12 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
 
+}
+#content {
+ margin: 0;
+ padding: 0;
+}
 .details p {
     color: white;
     margin-left: 2em;
