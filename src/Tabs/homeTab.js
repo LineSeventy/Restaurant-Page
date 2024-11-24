@@ -1,10 +1,7 @@
+import {stick,container} from "../index"
 export const home = () => {
 
-    const content = document.querySelector("#content");
-    const container = document.createElement("div");
-    container.classList.add("img");
 
-    const img = document.createElement("img");
 
     const details = document.createElement("div");
     details.classList.add("details");
@@ -47,9 +44,8 @@ paragraphs.forEach((text, index) => {
     });
 
 
-    container.appendChild(img);
-    container.appendChild(details);
-    content.appendChild(container);
-    details.appendChild(p)
-
+    stick()
+    container.appendChild(details)
+    details.appendChild(p)  
 }
+
