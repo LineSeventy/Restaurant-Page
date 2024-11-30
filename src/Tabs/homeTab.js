@@ -1,51 +1,80 @@
-import {stick,container} from "../index"
+import {content,container} from "../index"
+"use strict"
+
 export const home = () => {
+   const createCard = (contentType, contentData) => {
+      const card = document.createElement("div");
+      card.classList.add(contentType);
+   
+      const title = document.createElement("h3"); 
+      title.textContent = contentData.title;
+      card.appendChild(title);
+   
 
+      if (contentType === "description") {
+         const desc = document.createElement("p");
+         desc.textContent = contentData.content;
+         card.appendChild(desc);
+      } else if (contentType === "schedule") {
 
+         contentData.dates.forEach(date => {
+            const desc = document.createElement("p");
+            desc.textContent = date;
+            card.appendChild(desc);
+         });
 
-    const details = document.createElement("div");
-    details.classList.add("details");
-    
-    const paragraphs = [
-        "ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, alias voluptates nihil commodi omnis dolorem voluptatum quod asperiores voluptate! Ab deleniti asperiores tempore. Temporibus cupiditate voluptates a, voluptatem corrupti hic. ",
-        "ipsum dolor sit, amet consectetur adipisicing elit. Rem ab debitis laborum tempora praesentium aliquid sit beatae, corrupti illo magni illum vitae fuga soluta rerum itaque dolorum architecto sunt iusto.",
-        "bipsum dolor sit amet consectetur adipisicing elit. Esse, velit! Commodi temporibus necessitatibus consectetur velit voluptates quasi eos delectus blanditiis iusto adipisci, sapiente saepe, quia veritatis molestias magnam optio modi.",
-    ]
-    let titles = [
-        "Title1",
-        "Title2",
-        "Title3",
-    ]
+      } else if (contentType === "contact") {
 
-
-
-    const p = document.createElement("p");
-    p.classList.add("p");
-    
-    const lineBreaks = 3;
-
-paragraphs.forEach((text, index) => {
-    const strong = document.createElement("strong");
-    strong.appendChild(document.createTextNode(titles[index])); 
-        
-      p.appendChild(strong);
-      
-      p.appendChild(document.createElement("br"));
-
-      p.appendChild(document.createTextNode(text));
-
-      if (index < paragraphs.length - 1) {
-        for (let i = 0; i < lineBreaks; i++) {
-          p.appendChild(document.createElement("br")
-        );
-        }
+         const address = document.createElement("p");
+         address.textContent = contentData.address;
+         card.appendChild(address);
+   
+         const email = document.createElement("p");
+         email.textContent = contentData.mail;
+         card.appendChild(email);
+   
+         const socialTitle = document.createElement("h3");
+         socialTitle.textContent = contentData.title2;
+         card.appendChild(socialTitle);
+   
+         const instagram = document.createElement("p");
+         instagram.textContent = contentData.instagram;
+         card.appendChild(instagram);
+   
+         const fb = document.createElement("p");
+         fb.textContent = contentData.fb;
+         card.appendChild(fb);
       }
-      details.appendChild(p)
-    });
-
-
-    stick()
-    container.appendChild(details)
-    details.appendChild(p)  
+   
+      container.appendChild(card);
+      content.appendChild(container);
+   }
+   
+   const contentHome = {
+     description: {
+       title: "Description",
+       content: "Step into The Cozy Corner, where warm, rustic charm meets modern culinary delights. Our menu features classic comfort food elevated with fresh, seasonal ingredients. From hearty soups to mouthwatering desserts, every dish is crafted with love and care."
+     },
+     schedule: {
+       title: "Schedule",
+       dates: [
+         "Monday - Thursday: 11:00 AM - 9:00 PM",
+         "Friday - Saturday: 11:00 AM - 10:00 PM",
+         "Sunday: 10:00 AM - 8:00 PM"
+       ]
+     },
+     contact: {
+       title: "Contact Us",
+       address: "Address: [Your Restaurant Address]",
+       mail: "Email: [Your Restaurant Email]",
+       title2: "Social Media",
+       instagram: "Instagram: [@yourrestaurantinstagramhandle]",
+       fb: "Facebook: [@yourrestaurantfacebookhandle]"
+     }
+   };
+   
+   // Create all cards using the generalized function
+   createCard("description", contentHome.description);
+   createCard("schedule", contentHome.schedule);
+   createCard("contact", contentHome.contact);
 }
-
