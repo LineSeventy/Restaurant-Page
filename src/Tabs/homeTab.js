@@ -1,20 +1,29 @@
 import {content,container} from "../index"
 "use strict"
 
+
 export const home = () => {
+
+   const containerHome = document.createElement("div");
+   containerHome.classList.add("containerHome");
+   if(containerHome){
    const createCard = (contentType, contentData) => {
+
       const card = document.createElement("div");
       card.classList.add(contentType);
-   
+      
+
+
       const title = document.createElement("h3"); 
       title.textContent = contentData.title;
       card.appendChild(title);
-   
+      
 
       if (contentType === "description") {
          const desc = document.createElement("p");
          desc.textContent = contentData.content;
          card.appendChild(desc);
+
       } else if (contentType === "schedule") {
 
          contentData.dates.forEach(date => {
@@ -45,8 +54,10 @@ export const home = () => {
          fb.textContent = contentData.fb;
          card.appendChild(fb);
       }
-   
-      container.appendChild(card);
+
+
+      containerHome.appendChild(card);
+      container.appendChild(containerHome);
       content.appendChild(container);
    }
    
@@ -73,8 +84,8 @@ export const home = () => {
      }
    };
    
-   // Create all cards using the generalized function
    createCard("description", contentHome.description);
    createCard("schedule", contentHome.schedule);
    createCard("contact", contentHome.contact);
+}
 }
