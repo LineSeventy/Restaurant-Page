@@ -1,0 +1,28 @@
+.containerHome{
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: repeat(3,1fr);
+}
+.description{
+    grid-column: 3/3;
+}
+
+.schedule{
+    grid-row: 2/2;
+    grid-column: 3/3;
+
+}
+.contact {
+    grid-row: 3/3;
+    grid-column: 3/3;
+}
+
+.containerHome div{
+
+    color: white;
+   background-color: rgba(0, 0, 0, 0.5); 
+    padding-left: 2rem;
+    padding-right: 1rem;
+}
+
