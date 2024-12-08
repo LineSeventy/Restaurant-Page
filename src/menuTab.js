@@ -1,4 +1,4 @@
-import{container, content, img, stick} from "../index"
+import{container, content, img, stick} from "./index"
 
 export const menuTab = () => {
     
