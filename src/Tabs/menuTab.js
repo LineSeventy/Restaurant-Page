@@ -54,7 +54,7 @@ export const menuTab = () => {
       content.appendChild(container);
     const menuContent = {
     
-    beverages:
+    Beverages:
     [{title: "House-Brewed Iced Tea", 
     description: "A refreshing blend of black tea, sweetened to perfection",
     price:"$2.50"},
@@ -67,7 +67,7 @@ export const menuTab = () => {
     description:"A tangy and refreshing drink made with real lemons.",
     price:"$3.50"}],
 
-    deserts:[
+    Deserts:[
     {title:"Warm Apple Pie",
     description:"A classic dessert, served warm with a scoop of vanilla ice cream.",
     price:"$5.00"
@@ -84,7 +84,7 @@ export const menuTab = () => {
     }
 ],
 
-    meals:[
+    Meals:[
     {title:"Classic Grilled Cheese",
     description:"A simple yet satisfying dish, made with gooey cheese and toasted bread.",
     price:"$7.00",
