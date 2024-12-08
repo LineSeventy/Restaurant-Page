@@ -1,6 +1,6 @@
 import "./style.css";
 import "./home.css";
-import "./home.css";
+import "./menu.css";
 import "./about.css";;
 import {home} from "./homeTab";
 import {menuTab} from "./menuTab";
