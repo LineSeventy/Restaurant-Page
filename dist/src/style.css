@@ -1,0 +1,46 @@
+:root{
+    --background-color:rgb(48, 87, 48);
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    
+}
+header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color);
+    box-shadow: 1px 5px 5px black;
+    color: white;
+    height: 10vh;
+}
+header h1{
+    margin-left: 1rem;
+    font-style: italic;
+
+}
+nav button{
+    padding: 1rem;
+    border-radius: 1rem;
+    border: none;
+    margin-right: 1rem;
+}
+*{
+    box-sizing: border-box;
+}
+#content{
+    overflow: scroll;
+    background: url(https://media.istockphoto.com/id/959262284/vector/cartoon-cute-hand-drawn-fast-food-seamless-pattern.jpg?s=612x612&w=0&k=20&c=vFFQaAumzV5TeDUlP_NsGzHh5UqeXxyFNTqVVghdwQ0=);
+}
+.container{
+
+    height: 90vh;
+
+
+}
