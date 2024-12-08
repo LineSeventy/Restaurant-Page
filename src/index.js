@@ -1,10 +1,10 @@
-import "./CSS/style.css";
-import "./CSS/home.css";
-import "./CSS/menu.css";
-import "./CSS/about.css";;
-import {home} from "./Tabs/homeTab";
-import {menuTab} from "./Tabs/menuTab";
-import {aboutTab} from "./Tabs/aboutTab";
+import "./style.css";
+import "./home.css";
+import "./menu.css";
+import "./about.css";;
+import {home} from "./homeTab";
+import {menuTab} from "./menuTab";
+import {aboutTab} from "./aboutTab";
 "use strict";
 
 export const content = document.querySelector("#content");

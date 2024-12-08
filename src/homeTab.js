@@ -1,4 +1,4 @@
-import {content,container} from "../index"
+import {content,container} from "./index"
 "use strict"
 
 

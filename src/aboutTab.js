@@ -1,4 +1,4 @@
-import {container,content} from "../index"
+import {container,content} from "./index"
 
 export const aboutTab = () =>{
     const aboutMenu = {Title: "About The Cozy Corner",
